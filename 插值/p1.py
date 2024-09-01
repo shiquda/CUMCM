@@ -5,6 +5,10 @@ import numpy as np
 from scipy import interpolate
 import pylab as pl
 
+import scienceplots
+
+pl.style.use(['science', 'grid', 'cjk-sc-font', 'no-latex'])
+
 x = np.linspace(0, 10, 11)
 # x=[  0.   1.   2.   3.   4.   5.   6.   7.   8.   9.  10.]
 y = np.sin(x)

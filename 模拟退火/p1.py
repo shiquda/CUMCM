@@ -21,13 +21,17 @@ def f(x):
 # 可视化函数（开始清楚一次然后重复的画）
 
 
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+
+
 def visual(x):
     plt.cla()
     plt.axis([lo-1, hi+1, -20, 20])
     m = np.arange(lo, hi, 0.0001)
     plt.plot(m, f(m))
     plt.plot(x, f(x), marker='o', color='black', markersize='4')
-    plt.title('temperature={}'.format(T))
+    plt.title('温度={}'.format(T))
     plt.pause(0.1)  # 如果不停啥都看不见
 
 # 随机产生初始值
